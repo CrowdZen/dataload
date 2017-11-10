@@ -1,0 +1,12 @@
+# Use postgres/example user/password credentials
+
+db:
+    #image: postgres
+    image: mdillon/postgis
+    restart: always
+    environment:
+        POSTGRES_PASSWORD: example
+    ports:
+      - 15432:5432
+    volumes:
+        - .:/datadump
