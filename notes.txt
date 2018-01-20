@@ -1,0 +1,1 @@
+\COPY (SELECT time_ts, activity_level FROM dining WHERE location='nev' AND time_ts > '2016-09-28' AND time_ts < '2017-05-15' AND time_ts::time BETWEEN '17:00:00' AND '20:00:00' ORDER BY time_ts ASC) TO '/crowdzen/denev.csv' WITH CSV HEADER;
